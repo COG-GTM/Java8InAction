@@ -29,31 +29,34 @@ The source code for all examples can be found in the directory [src/main/java/la
 * Appendix D: Lambdas and JVM bytecode
 We will update the repository as we update the book. Stay tuned!
 
-### Make sure to have JDK8 installed
-The latest binary can be found here: http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html
+### Prerequisites
 
+**JDK 11** or higher is required. You can use any distribution (Temurin, OpenJDK, Oracle JDK, etc.).
+
+```
 $ java -version
+openjdk version "11.0.x" ...
+```
 
-java version "1.8.0_05"
-Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
-Java HotSpot(TM) 64-Bit Server VM (build 25.5-b02, mixed mode)
-
-
-You can download a preview version here: https://jdk8.java.net/
+Download Temurin JDK 11: https://adoptium.net/temurin/releases/?version=11
 
 ### Compile/Run the examples
-Using maven:
 
-$ mvn compile
+Using Maven:
 
+```
+$ mvn clean compile
 $ cd target/classes
-
 $ java lambdasinaction/chap1/FilteringApples
+```
 
+Run tests:
 
-Alternatively you can compile the files manually inside the directory src/main/java
+```
+$ mvn test
+```
 
-You can also import the project in your favorite IDE:
-    * In IntelliJ use "File->Open" menu and navigate to the folder where the project resides
-    * In Eclipse use "File->Import->Existing Maven Projects" (also modify "Reduntant super interfaces" to report as Warnings instead of Errors
-    * In Netbeans use "File->Open Project" menu
+Alternatively you can import the project in your favorite IDE:
+  * In IntelliJ use "File->Open" menu and navigate to the folder where the project resides
+  * In Eclipse use "File->Import->Existing Maven Projects"
+  * In Netbeans use "File->Open Project" menu
