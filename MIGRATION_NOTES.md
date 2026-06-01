@@ -14,7 +14,10 @@
 | maven-surefire-plugin | (none) | 3.2.5 | Added for test execution |
 | maven-failsafe-plugin | (none) | 3.2.5 | Added for integration test support |
 | maven-enforcer-plugin | (none) | 3.5.0 | Added to enforce Java 11+ at build time |
-| maven-shade-plugin | (unchanged) | (unchanged) | Retained for JMH benchmark packaging |
+| maven-javadoc-plugin | (none) | 3.6.3 | Added with `<doclint>none</doclint>` (Java 11 doclint is stricter) |
+| maven-shade-plugin | (unversioned) | 3.6.2 | Pinned explicit version (was unversioned, which Maven warns is unstable) |
+
+Build encoding is pinned to UTF-8 for both source (`project.build.sourceEncoding`) and reporting (`project.reporting.outputEncoding`).
 
 ## Dependency Upgrades
 
