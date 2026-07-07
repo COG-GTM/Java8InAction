@@ -29,17 +29,18 @@ The source code for all examples can be found in the directory [src/main/java/la
 * Appendix D: Lambdas and JVM bytecode
 We will update the repository as we update the book. Stay tuned!
 
-### Make sure to have JDK8 installed
-The latest binary can be found here: http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html
+### Make sure to have JDK 11 (or newer) installed
+The 2nd-edition examples use APIs introduced after Java 8 (e.g. `Optional.or`, `Optional.stream`,
+`Collectors.flatMapping`/`filtering`, `Stream.takeWhile`), so the project targets Java 11
+(`maven.compiler.release=11` in `pom.xml`). A JDK 11 or later distribution is required to build.
+You can download a JDK from [Eclipse Temurin (Adoptium)](https://adoptium.net/) or
+[Oracle Java](https://www.oracle.com/java/technologies/downloads/).
 
 $ java -version
 
-java version "1.8.0_05"
-Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
-Java HotSpot(TM) 64-Bit Server VM (build 25.5-b02, mixed mode)
-
-
-You can download a preview version here: https://jdk8.java.net/
+openjdk version "11.0.22" 2024-01-16
+OpenJDK Runtime Environment (build 11.0.22+7)
+OpenJDK 64-Bit Server VM (build 11.0.22+7, mixed mode)
 
 ### Compile/Run the examples
 Using maven:
@@ -55,5 +56,5 @@ Alternatively you can compile the files manually inside the directory src/main/j
 
 You can also import the project in your favorite IDE:
     * In IntelliJ use "File->Open" menu and navigate to the folder where the project resides
-    * In Eclipse use "File->Import->Existing Maven Projects" (also modify "Reduntant super interfaces" to report as Warnings instead of Errors
+    * In Eclipse use "File->Import->Existing Maven Projects" (also modify "Redundant super interfaces" to report as Warnings instead of Errors
     * In Netbeans use "File->Open Project" menu

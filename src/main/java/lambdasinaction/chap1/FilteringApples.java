@@ -9,26 +9,26 @@ public class FilteringApples{
 
         List<Apple> inventory = Arrays.asList(new Apple(80,"green"),
                                               new Apple(155, "green"),
-                                              new Apple(120, "red"));	
+                                              new Apple(120, "red"));
 
         // [Apple{color='green', weight=80}, Apple{color='green', weight=155}]
         List<Apple> greenApples = filterApples(inventory, FilteringApples::isGreenApple);
         System.out.println(greenApples);
-        
+
         // [Apple{color='green', weight=155}]
         List<Apple> heavyApples = filterApples(inventory, FilteringApples::isHeavyApple);
         System.out.println(heavyApples);
-        
+
         // [Apple{color='green', weight=80}, Apple{color='green', weight=155}]
         List<Apple> greenApples2 = filterApples(inventory, (Apple a) -> "green".equals(a.getColor()));
         System.out.println(greenApples2);
-        
+
         // [Apple{color='green', weight=155}]
         List<Apple> heavyApples2 = filterApples(inventory, (Apple a) -> a.getWeight() > 150);
         System.out.println(heavyApples2);
-        
+
         // []
-        List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 || 
+        List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 ||
                                                                        "brown".equals(a.getColor()));
         System.out.println(weirdApples);
     }
@@ -54,7 +54,7 @@ public class FilteringApples{
     }
 
     public static boolean isGreenApple(Apple apple) {
-        return "green".equals(apple.getColor()); 
+        return "green".equals(apple.getColor());
     }
 
     public static boolean isHeavyApple(Apple apple) {
@@ -69,7 +69,7 @@ public class FilteringApples{
             }
         }
         return result;
-    }       
+    }
 
     public static class Apple {
         private int weight = 0;
