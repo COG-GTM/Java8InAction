@@ -30,7 +30,7 @@ The source code for all examples can be found in the directory [src/main/java/la
 We will update the repository as we update the book. Stay tuned!
 
 ### Make sure to have JDK 17 installed
-The examples are Java 8 language features, but the build targets Java 17, so JDK 17 or later is required to compile them. Binaries can be found here: https://adoptium.net/temurin/releases/?version=17
+The examples are Java 8 language features, but the build targets Java 17, so JDK 17 or later is required to compile and run them. Binaries can be found here: https://adoptium.net/temurin/releases/?version=17
 
 $ java -version
 
